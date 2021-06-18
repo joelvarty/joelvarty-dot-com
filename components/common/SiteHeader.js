@@ -169,11 +169,12 @@ SiteHeader.getCustomInitialProps = async function ({
     let header = await api.getContentList({
       referenceName: "siteheader",
       languageCode: languageCode,
+	  take: 1
     });
 
     // if we have a header, set as content item
-    if (header && header.length > 0) {
-      contentItem = header[0];
+    if (header && header.items.length > 0) {
+      contentItem = header.items[0];
 
       // else return null
     } else {
