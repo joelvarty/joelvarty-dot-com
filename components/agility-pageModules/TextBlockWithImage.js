@@ -18,7 +18,7 @@ const TextBlockWithImage = ({ module }) => {
     // if relative link, use next/link
     if (isUrlAbsolute(url) === false) {
       return (
-        <Link href={href} as={url} title={text} target={target}>
+        <Link href={url} title={text} target={target}>
           <a className="inline-block mt-8 md:mt-8 px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-500 hover:bg-primary-700 focus:outline-none focus:border-primary-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
             {text}
           </a>
@@ -44,13 +44,14 @@ const TextBlockWithImage = ({ module }) => {
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
         <div className="md:w-6/12 flex-shrink-0 relative">
           {fields.primaryButton ? (
-            <Link href={href} as={fields.primaryButton.href}>
+            <Link href={fields.primaryButton.href}>
               <Image
                 src={fields.image.url}
                 alt={fields.image.label}
                 width="768"
                 height="512"
                 className="rounded-lg object-cover object-center cursor-pointer"
+				blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQ3NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
               />
             </Link>
           ) : (
