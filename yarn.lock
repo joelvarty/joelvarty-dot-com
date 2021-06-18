@@ -10,19 +10,19 @@
     axios "^0.21.1"
     axios-cache-adapter "^2.4.1"
 
-"@agility/content-sync@^0.1.24":
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/@agility/content-sync/-/content-sync-0.1.24.tgz#34a9553fd67b98a69dcd6c045bb7f72a279b19fe"
-  integrity sha512-crp1hXXr0n7D4adsjI1A86nrHmWigNyriWjhgCAlW5f270MObdhZa3gUUiplo2di4Tz68T94kvvNhHra+A9enw==
+"@agility/content-sync@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@agility/content-sync/-/content-sync-1.0.3.tgz#33441a17fb7b22a54f51a870c8fecf5d211298f2"
+  integrity sha512-KhaSiD3j+XXh2/oWy3+WrizBHGTxq33yWX6Qow4sGIRH4o5+suQzuBEZUyj/Kj5fEDuTV6AJIJseKhggQbaNpA==
   dependencies:
     "@agility/content-fetch" "^1.0.0"
     dotenv "^8.2.0"
-    proper-lockfile "^4.1.1"
+    proper-lockfile "^4.1.2"
 
-"@agility/nextjs@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@agility/nextjs/-/nextjs-0.1.4.tgz#c1da313c26f910c0d33ec3a6410952ebf115a5ee"
-  integrity sha512-0QK9tlstLY+urDn9Y8/Kj6yQOSuEfHSykR2cHHZTUhrvgUN2Kri0V9VZpld06NNC+keuOuYw+Z12ltGNN+iAkw==
+"@agility/nextjs@^0.2.0-rc14":
+  version "0.2.0-rc14"
+  resolved "https://registry.yarnpkg.com/@agility/nextjs/-/nextjs-0.2.0-rc14.tgz#eaeed440fcaf778db9f463c0f3f0a4bf64316771"
+  integrity sha512-DHgiUeVsLZByHcjsawz7HL9OLkD9nIOyHNUwNxuFSWjB22m5jn1V33EdxkF6ecjtC9n3Dm/WkWFsNGXyLIdl/Q==
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
@@ -2103,7 +2103,7 @@ prop-types@15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
-proper-lockfile@^4.1.1:
+proper-lockfile@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/proper-lockfile/-/proper-lockfile-4.1.2.tgz#c8b9de2af6b2f1601067f98e01ac66baa223141f"
   integrity sha512-TjNPblN4BwAWMXU8s9AEz4JmQxnD1NNL7bNOY/AKUzyamc379FWASUhc/K1pL2noVb+XmZKLL68cjzLsiOAMaA==

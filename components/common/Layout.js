@@ -9,7 +9,7 @@ import SiteFooter from "./SiteFooter";
 import LoadingWidget from "./LoadingWidget";
 
 // set up handle preview
-const isPreview = handlePreview();
+const handlingPreview = handlePreview();
 
 function Layout(props) {
   const {
@@ -18,7 +18,10 @@ function Layout(props) {
     dynamicPageItem,
     notFound,
     pageTemplateName,
+	isPreview,
+	isDevelopment
   } = props;
+
 
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
@@ -47,16 +50,18 @@ function Layout(props) {
         metaHTML={page.seo.metaHTML}
       />
       <div id="site-wrapper">
-        {isPreview && <LoadingWidget message="Loading Preview Mode" />}
-        {!isPreview && (
+        {handlingPreview && <LoadingWidget message="Loading Preview Mode" />}
+        {!handlingPreview && (
           <div id="site">
+			{ (isDevelopment || isPreview) &&
             <PreviewBar {...props} />
+			}
             <div className="flex flex-col min-h-screen">
               <SiteHeader {...props} />
               <main className="flex-grow">
                 <AgilityPageTemplate {...props} />
               </main>
-              <SiteFooter {...props} />
+
             </div>
           </div>
         )}
