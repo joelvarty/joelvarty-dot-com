@@ -40,6 +40,8 @@ const TextBlockWithImage = ({ module }) => {
     }
   };
 
+
+
   return (
     <div className="relative px-8">
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
@@ -61,8 +63,8 @@ const TextBlockWithImage = ({ module }) => {
             <AgilityImage
               src={fields.image.url}
               alt={fields.image.label}
-              width="768"
-              height="512"
+               width="768"
+               height="512"
               className="rounded-lg object-cover object-center"
 			  placeholder="blur"
 			  blurDataURL={getShimmer(768, 512)}
