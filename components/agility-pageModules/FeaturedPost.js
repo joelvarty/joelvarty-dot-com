@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import truncate from "truncate-html";
+import { AgilityImage  } from "@agility/nextjs";
+import { getShimmer } from "lib/shimmer";
 
 const FeaturedPost = ({ module }) => {
   // get module fields
@@ -36,10 +38,12 @@ const FeaturedPost = ({ module }) => {
           <Link href={`/blog/${featuredPost.fields.slug}`}>
             <a className="cursor-pointer">
               <div className="h-64 sm:h-96 relative">
-                <Image
+                <AgilityImage
                   src={featuredPost.fields.image.url}
                   className="object-cover object-center rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
                   layout="fill"
+				  placeholder="blur"
+			  	blurDataURL={getShimmer(768, 512)}
                 />
               </div>
             </a>

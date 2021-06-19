@@ -1,6 +1,7 @@
 import React from "react";
-import Image from "next/image";
+import { AgilityImage } from "@agility/nextjs";
 import Link from "next/link";
+import { getShimmer } from "lib/shimmer";
 
 const TextBlockWithImage = ({ module }) => {
   // get module fields
@@ -42,25 +43,29 @@ const TextBlockWithImage = ({ module }) => {
   return (
     <div className="relative px-8">
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
-        <div className="md:w-6/12 flex-shrink-0 relative">
+        <div className="md:w-6/12 flex-shrink-0 relative rounded-lg">
           {fields.primaryButton ? (
             <Link href={fields.primaryButton.href}>
-              <Image
+
+              <AgilityImage
                 src={fields.image.url}
                 alt={fields.image.label}
                 width="768"
                 height="512"
                 className="rounded-lg object-cover object-center cursor-pointer"
-				blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQ3NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+				placeholder="blur"
+				blurDataURL={getShimmer(768, 512)}
               />
             </Link>
           ) : (
-            <Image
+            <AgilityImage
               src={fields.image.url}
               alt={fields.image.label}
               width="768"
               height="512"
               className="rounded-lg object-cover object-center"
+			  placeholder="blur"
+			  blurDataURL={getShimmer(768, 512)}
             />
           )}
         </div>

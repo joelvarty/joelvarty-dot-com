@@ -49,7 +49,7 @@ const SiteFooter = () => {
             target="_blank"
             title="Agility CMS"
           >
-            <Image
+            <img
               src="/assets/agility-logo.svg"
               alt="Agility CMS"
               width="90"
