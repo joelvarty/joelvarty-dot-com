@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { initGA, logPageView } from "../../lib/analytics"
+import { initGA, logItemID, logPageView } from "../../lib/analytics"
 
 import { getPageTemplate } from "components/agility-pageTemplates";
 import { handlePreview } from "@agility/nextjs";
@@ -52,6 +52,7 @@ function Layout(props) {
 
 		const handleRouteChange = (url) => {
 			logPageView(url)
+			logItemID(page.pageID, "page")
 		};
 
 		if (!window.GA_INITIALIZED) {
